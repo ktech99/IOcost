@@ -4,3 +4,5 @@ Nested loop join:
       B(R) + T(R)*B(S)
     Page At a time:
       B(R) + B(R)*B(S)
+    Block nested Loop Join:
+      B(R) + B(R)B(S)/(M-1)
