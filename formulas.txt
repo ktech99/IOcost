@@ -1,0 +1,6 @@
+Nested loop join:
+  Cost:
+    Multi pass:
+      B(R) + T(R)*B(S)
+    Page At a time:
+      B(R) + B(R)*B(S)
