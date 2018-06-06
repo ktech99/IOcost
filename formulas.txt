@@ -6,3 +6,10 @@ Nested loop join:
       B(R) + B(R)*B(S)
     Block nested Loop Join:
       B(R) + B(R)B(S)/(M-1)
+
+Hash Join:
+  Cost:
+    B(R) + B(S) --> considering B(R) <= M
+
+Sort Merge Join:
+  Cost
