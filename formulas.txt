@@ -14,3 +14,10 @@ Hash Join:
 Sort Merge Join:
   Cost:
     B(R) + B(s) -- > considering B(R) + B(s) <= M
+
+Index Join:
+  Cost:
+    Clustered index on S:
+      B(R) + T(R)*(B(S)/V(S,a))
+    Unclustered index on S:
+      B(R) + T(R)*(T(S)/V(S,a))
