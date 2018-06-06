@@ -12,4 +12,5 @@ Hash Join:
     B(R) + B(S) --> considering B(R) <= M
 
 Sort Merge Join:
-  Cost
+  Cost:
+    B(R) + B(s) -- > considering B(R) + B(s) <= M
