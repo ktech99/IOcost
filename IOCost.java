@@ -26,5 +26,13 @@ public class IOCost {
     nestedLoopJoin(T1, T2, B1, B2, M);
   }
 
-  public void nestedLoopJoin() {}
+  public static void nestedLoopJoin(int T1, int T2, int B1, int B2, int M) {
+    System.out.println("Nested Loop Join:");
+    int multiPass = B1 + T1 * B2;
+    System.out.println("\tMulti pass: " + multiPass);
+    int pageAtATime = B1 + B1 * B2;
+    System.out.println("\tPage at a time pass: " + pageAtATime);
+    int BlockNested = B1 + (B1 * B2) / (M - 1);
+    System.out.println("\tBlock Nested Loop Join: " + BlockNested);
+  }
 }
