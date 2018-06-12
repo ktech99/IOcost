@@ -12,7 +12,9 @@ public class IOCost {
     int B1 = sc.nextInt();
     System.out.println("Enter Blocks of 2:");
     int B2 = sc.nextInt();
-    if (B1 > B2) {
+    System.out.println("Memory available:");
+    int M = sc.nextInt();
+    if (B1 < B2) {
       // Swapping numbers for calculations
       T1 = T1 + T2;
       T2 = T1 - T2;
@@ -21,5 +23,8 @@ public class IOCost {
       B2 = B1 - B2;
       B1 = B1 - B2;
     }
+    nestedLoopJoin(T1, T2, B1, B2, M);
   }
+
+  public void nestedLoopJoin() {}
 }
