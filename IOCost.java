@@ -1,3 +1,10 @@
+// Program to calculate IO cost of a given Query
+// T1 is tuples of R
+// T2 is tubles of S
+// B1 is Blocks of R
+// B2 is blocks of S
+// M is available memory
+
 import java.util.Scanner;
 
 public class IOCost {
