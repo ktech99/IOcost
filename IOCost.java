@@ -24,6 +24,7 @@ public class IOCost {
       B1 = B1 - B2;
     }
     nestedLoopJoin(T1, T2, B1, B2, M);
+    hashJoin(B1, B2, M);
   }
 
   public static void nestedLoopJoin(int T1, int T2, int B1, int B2, int M) {
@@ -34,5 +35,13 @@ public class IOCost {
     System.out.println("\tPage at a time pass: " + pageAtATime);
     int BlockNested = B1 + (B1 * B2) / (M - 1);
     System.out.println("\tBlock Nested Loop Join: " + BlockNested);
+  }
+
+  public static void hashJoin(int B1, int B2, int M) {
+    if (B1 > M) {
+      System.out.println("Hash Join not suitable as B(R) > M");
+    } else {
+      System.out.println("Hash Join:" + (B1 + B2));
+    }
   }
 }
