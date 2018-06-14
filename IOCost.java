@@ -21,17 +21,25 @@ public class IOCost {
     int B2 = sc.nextInt();
     System.out.println("Memory available:");
     int M = sc.nextInt();
+    System.out.println("Enter unique tuples of 1");
+    int v1 = sc.nextInt();
+    System.out.println("Enter unique tuples of 2");
+    int v2 = sc.nextInt();
     if (B1 < B2) {
-      // Swapping numbers for calculations
+      // Swapping numbers if B(R) < B(S)
       T1 = T1 + T2;
       T2 = T1 - T2;
       T1 = T1 - T2;
       B1 = B1 + B2;
       B2 = B1 - B2;
       B1 = B1 - B2;
+      v1 = v1 + v2;
+      v2 = v1 - v2;
+      v1 = v1 - v2;
     }
     nestedLoopJoin(T1, T2, B1, B2, M);
     hashJoin(B1, B2, M);
+    sortMergeJoin(B1, B2, M);
   }
 
   public static void nestedLoopJoin(int T1, int T2, int B1, int B2, int M) {
@@ -58,5 +66,13 @@ public class IOCost {
     } else {
       System.out.println("Sort Merge Join:" + (B1 + B2));
     }
+  }
+
+  public static void indexJoin(int T1, int B1, int B2, int v2) {
+    System.out.println("Index Join:");
+    int clustered = B1 + T1 * (B2 / V2);
+    int unclustered = B1 + T1 * (T2 / V2);
+    System.out.println("\tClustered index on S:" + clustered);
+    System.out.println("\tUnclustered index on S:" + unclustered);
   }
 }
