@@ -44,4 +44,12 @@ public class IOCost {
       System.out.println("Hash Join:" + (B1 + B2));
     }
   }
+
+  public static void sortMergeJoin(int B1, int B2, int M) {
+    if (B1 + B2 > M) {
+      System.out.println("Sort Merge Join not suitable as B(R) + B(S) > M");
+    } else {
+      System.out.println("Sort Merge Join:" + (B1 + B2));
+    }
+  }
 }
