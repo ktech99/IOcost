@@ -40,6 +40,7 @@ public class IOCost {
     nestedLoopJoin(T1, T2, B1, B2, M);
     hashJoin(B1, B2, M);
     sortMergeJoin(B1, B2, M);
+    indexJoin(T1, T2, B1, B2, v2);
   }
 
   public static void nestedLoopJoin(int T1, int T2, int B1, int B2, int M) {
@@ -68,10 +69,10 @@ public class IOCost {
     }
   }
 
-  public static void indexJoin(int T1, int B1, int B2, int v2) {
+  public static void indexJoin(int T1, int T2, int B1, int B2, int v2) {
     System.out.println("Index Join:");
-    int clustered = B1 + T1 * (B2 / V2);
-    int unclustered = B1 + T1 * (T2 / V2);
+    int clustered = B1 + T1 * (B2 / v2);
+    int unclustered = B1 + T1 * (T2 / v2);
     System.out.println("\tClustered index on S:" + clustered);
     System.out.println("\tUnclustered index on S:" + unclustered);
   }
